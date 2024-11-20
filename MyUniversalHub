@@ -1,0 +1,65 @@
+-- made by Chorfla/klkk
+local DiscordLib =
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+	
+local win = DiscordLib:Window("Universal hub")
+
+local serv = win:Server("Main", "")
+
+local sldrs = serv:Channel("Humanoid")
+
+	local sldr =
+    sldrs:Slider(
+    "WalkSpeed",
+    10,
+    999,
+    16,
+    function(t)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+    end
+	)
+
+local sldr =
+    sldrs:Slider(
+    "JumpPower",
+    30,
+    999,
+    51,
+    function(t)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+    end
+)
+
+local btns = serv:Channel("Game")
+
+btns:Button(
+    "Fly Script",
+    function()
+		DiscordLib:Notification("Notification", "Fly Script Loaded Succefully!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chorflaboy/Scripts/refs/heads/main/FlyScript.lua",true))()
+    end
+)
+
+btns:Button(
+    "Infinite Yield",
+    function()
+		DiscordLib:Notification("Notification", "Infinite Yield Loaded Succefully!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chorflaboy/Scripts/refs/heads/main/Infinite%20Yield%20Script.lua",true))()
+    end
+)
+
+btns:Button(
+    "UNC Test",
+    function()
+		DiscordLib:Notification("Notification", "UNC Test Loaded Succefully! (press f9 or do /console)", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chorflaboy/Scripts/refs/heads/main/UNCTestScript.lua",true))()
+    end
+)
+
+btns:Button(
+    "Chat Bypasser",
+    function()
+		DiscordLib:Notification("Notification", "Chat Bypasser Loaded Succefully!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/chorflaboy/Scripts/refs/heads/main/ChatBypasser.lua",true))()
+    end
+)
