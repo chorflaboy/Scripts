@@ -1,4 +1,3 @@
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/evxncodes/mainroblox/main/anti-afk", true))()
+for i,v in next, getconnections(game:GetService("Players").LocalPlayer.Idled) do
+                    v:Disable()
+end
